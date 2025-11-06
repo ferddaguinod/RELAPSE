@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grind: Your Cart</title>
+    <link rel="stylesheet" href="CSS/Cart.css">
+    <link rel="stylesheet" href="CSS/About.css">
+    <script defer src="Cart.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+                <span class="text1">🛒 MyCart</span>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="Prod.html">Products</a>
+                <a href="About.html">About Us</a>
+                <a href="Contact.html">Contact Us</a>
+                <a href="Login.html">Login | Signup</a>
+                <a href="Cart.html">Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </nav>
+    </header>
+<section><br><br><br><br>
+  <h2>🛒 Your Shopping Cart</h2>
+    <div class="cart-container">
+        <div id="cart-items"></div>
+        <h3>Total: ₱<span id="cart-total">0</span></h3>
+        <button onclick="clearCart()">Clear Cart</button>
+        <button onclick="window.location.href='Prod.html'">Back to Shop</button>
+    </div>
+    </section>
+
+</body>
+</html>

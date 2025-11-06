@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grind: For those who never stop</title>
+  <link rel="stylesheet" href="CSS/Login.css" />
+  <link rel="stylesheet" href="CSS/Login1.css" />
+  <style>
+    /* Wrap content container transition */
+    #main-content {
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    #main-content.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Relapse button style */
+    #playSound {
+      background-color: #ff4b2b;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+    }
+    /* Hide Relapse button when needed */
+    #playSound.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Back button style */
+    #backButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff4b2b;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+      z-index: 1000;
+    }
+    #backButton.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+  <script defer src="Login.js"></script>
+</head>
+<body>
+  <video autoplay loop muted playsinline id="bg-video" style="width: 100%; height: auto;">
+    <source src="NANDITO.mp4" type="video/mp4" />
+  </video>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="Images/logo.png" alt="Logo" />
+        <span class="text">GRIND</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="Prod.html">Products</a>
+        <a href="About.html">About Us</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="Login.html">Login | Signup</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Wrap everything you want hidden/shown here -->
+  <section class="auth-section" id="main-content">
+    <div class="container">
+      <div class="form-box">
+        <h2 id="form-title">Login</h2>
+        <form id="auth-form">
+          <div class="input-group">
+            <input type="text" id="username" placeholder="Username" required />
+          </div>
+          <div class="input-group">
+            <input type="password" id="password" placeholder="Password" required />
+          </div>
+          <div id="confirm-password-group" class="input-group hidden">
+            <input type="password" id="confirm-password" placeholder="Confirm Password" />
+          </div>
+          <button type="submit" id="submit-btn">Login</button>
+          <p><center>or</center></p>
+          <button type="button" id="playSound">RELAPSE</button>
+          <p id="toggle-text">
+            Don't have an account? <a href="#" id="toggle-form">Sign Up</a>
+          </p>
+          <div id="popup-modal" class="modal hidden">
+            <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <p id="popup-message"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back button outside main-content -->
+  <button id="backButton">BACK</button>
+
+  <script>
+    const video = document.getElementById('bg-video');
+    const playButton = document.getElementById('playSound');
+    const backButton = document.getElementById('backButton');
+    const mainContent = document.getElementById('main-content');
+
+    // Replace with your actual audio file path
+    const music = new Audio('path/to/your/audio.mp3');
+    music.loop = true;
+
+    playButton.addEventListener('click', () => {
+      mainContent.classList.add('hidden');
+      playButton.classList.add('hidden');
+      backButton.classList.add('visible');
+
+      video.muted = false;
+      video.play();
+      music.play();
+    });
+
+    backButton.addEventListener('click', () => {
+      music.pause();
+      music.currentTime = 0;
+      video.muted = true;
+
+      mainContent.classList.remove('hidden');
+      playButton.classList.remove('hidden');
+      backButton.classList.remove('visible');
+    });
+  </script>
+</body>
+</html>

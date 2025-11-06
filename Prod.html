@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grind: For those who never stop</title>
+    <link rel="stylesheet" href="CSS/Prod.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Prod1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="Cart.js"></script>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+    <div class="logo">
+        <img src="Images\logo.png" alt="Logo">
+        <span class="text">GRIND</span>
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Enter Product..." />
+    <button type="submit">
+        <i class="fas fa-search"></i>
+    </button>
+    <button class="cart-button" onclick="window.location.href='Cart.html'">
+            🛒 Cart <span id="cart-count">0</span>
+        </button>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="Prod.html" class="page">Products</a>
+        <a href="About.html">About Us</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="Login.html">Login | Signup</a>Basic Pillow
+    </div>
+</nav>
+
+</header>
+<br><br><br>
+<section class="product-grid">
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\1.PNG" alt="Cozy Star Knit Sweater">
+                <h3>Cozy Star Knit Sweater</h3>
+                <p>₱799</p>
+                 <button onclick="addToCart('Cozy Star Knit Sweater', 799, 'Images/PROD/1.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\2.PNG" alt="Elegant Wide-Leg Pants">
+                <h3>Elegant Wide-Leg Pants</h3>
+                <p>₱599</p>
+                <button onclick="addToCart('Elite Wide-Leg Pants', 599, 'Images/PROD/2.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\3.PNG" alt="Classic Graphic Tee">
+                <h3>Classic Graphic Tee</h3>
+                <p>₱499</p>
+                <button onclick="addToCart('Classic Graphic Tee', 499, 'Images/PROD/3.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\4.PNG" alt="Heritage Logo Cap">
+                <h3>Heritage Logo Cap</h3>
+                <p>₱299</p>
+                <button onclick="addToCart('Classic Graphic Tee', 299, 'FImages/PROD/4.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\5.PNG" alt="Modern Fit Crewneck">
+                <h3>Modern Fit Crewneck</h3>
+                <p>₱699</p>
+                <button onclick="addToCart('Modern Fit Crewneck', 699, 'Images/PROD/5.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\6.PNG" alt="Essential Hoodie">
+                <h3>Essential Hoodie</h3>
+                <p>₱749</p>
+                <button onclick="addToCart('Essential Hoodie', 749, 'Images/PROD/6.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\7.PNG" alt="Streetwear Beanie">
+                <h3>Streetwear Beanie</h3>
+                <p>₱399</p>
+                <button onclick="addToCart('Streetwear Beanie', 399, 'Images/PROD/7.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\8.PNG" alt="Performance Joggers">
+                <h3>Performance Joggers</h3>
+                <p>₱499</p>
+                <button onclick="addToCart('Performance Joggers', 499, 'Images/PROD/8.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\9.PNG" alt="Pro Trucker Cap">
+                <h3>Pro Trucker Cap</h3>
+                <p>₱599</p>
+                <button onclick="addToCart('Pro Trucker Cap', 599, 'Images/PROD/9.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\10.PNG" alt="Retro Varsity Sweatshirt">
+                <h3>Retro Varsity Sweatshirt</h3>
+                <p>₱699</p>
+                <button onclick="addToCart('Retro Varsity Sweatshirt', 699, 'Images/PROD/10.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\11.PNG" alt="Classic Dad Hat | Yupoong 6245CM">
+                <h3>Classic Dad Hat | Yupoong 6245CM</h3>
+                <p>₱499</p>
+                <button onclick="addToCart('Classic Dad Hat | Yupoong 6245CM', 499, 'Images/PROD/11.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+            <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\12.PNG" alt="Cotton Hand Towel | Imabari">
+                <h3>Cotton Hand Towel | Imabari</h3>
+                <p>₱129</p>
+                <button onclick="addToCart('Cotton Hand Towel | Imabari', 129, 'Images/PROD/12.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\13.PNG" alt="Unisex Heavy Blend Hoodie | Gildan 18500">
+                <h3>Unisex Heavy Blend Hoodie | Gildan 18500</h3>
+                <p>₱899</p>
+                <button onclick="addToCart('Unisex Heavy Blend Hoodie | Gildan 18500', 899, 'Images/PROD/13.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\14.PNG" alt="5 Panel Cap | Yupoong 7005">
+                <h3>5 Panel Cap | Yupoong 7005</h3>
+                <p>₱289</p>
+                <button onclick="addToCart('5 Panel Cap | Yupoong 7005', 289, 'Images/PROD/14.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\15.PNG" alt="Vintage Cap | Otto Cap 18-1248">
+                <h3>Vintage Cap | Otto Cap 18-1248</h3>
+                <p>₱329</p>
+                <button onclick="addToCart('Vintage Cap | Otto Cap 18-1248', 329, 'Images/PROD/15.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\16.PNG" alt="Baby Short Sleeve One Piece | Bella + Canvas 100B">
+                <h3>Baby Short Sleeve One Piece | Bella + Canvas 100B</h3>
+                <p>₱799</p>
+                <button onclick="addToCart('Baby Short Sleeve One Piece | Bella + Canvas 100B', 399, 'Images/PROD/16.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\17.PNG" alt="All-Over Print Unisex Wide-Leg Pants">
+                <h3>All-Over Print Unisex Wide-Leg Pants</h3>
+                <p>₱1199</p>
+                <button onclick="addToCart('All-Over Print Unisex Wide-Leg Pants', 1199, 'Images/PROD/17.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\18.PNG" alt="Throw Blanket">
+                <h3>Throw Blanket</h3>
+                <p>₱999</p>
+                <button onclick="addToCart('Throw Blanket', 999, 'Images/PROD/18.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\19.PNG" alt="Women's Relaxed T-Shirt | Bella + Canvas 6400">
+                <h3>Women's Relaxed T-Shirt | Bella + Canvas 6400</h3>
+                <p>₱479</p>
+                <button onclick="addToCart('Womens Relaxed T-ShirT  Bella Canvas 6400', 999, 'Images/PROD/19.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\20.PNG" alt="Basic Pillow">
+                <h3>Basic Pillow</h3>
+                <p>₱1299</p>
+                <button onclick="addToCart('Basic Pillow', 1299, 'Images/PROD/20.PNG')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images\PROD\21.PNG" alt="Cozy Star Knit Sweater">
+                <h3>Cozy Star Knit Sweater</h3>
+                <p>₱799</p>
+                <button onclick="addToCart('Streetwear Beanie', 399, 'FD/Images/7.jpg')">Add to Cart</button> <button class="like-button" onclick="toggleLike(this)">♡</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

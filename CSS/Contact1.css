@@ -1,0 +1,160 @@
+header {
+    text-align: center;
+    padding: 0px;
+    background: #222;
+    color: white;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info, .contact-form {
+    width: 45%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for cards */
+.contact-info:hover, .contact-form:hover {
+    transform: translateY(-5px);
+}
+
+/* Form Inputs */
+.contact-form form input, 
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button Glow Effect */
+.glow-button {
+    width: 100%;
+    padding: 10px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Glow effect on hover */
+.glow-button:hover {
+    background: #555;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Social Media Hover Effect */
+.social-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Social Media Icons Bounce Effect */
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* Social Icons */
+.social-icons img {
+    width: 24px; 
+    height: auto;
+    margin-right: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply Animations */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slide-in {
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Map */
+.map-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.map-container iframe {
+    width: 80%;
+    height: 300px;
+    border: 0;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-info, .contact-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Phone List Alignment */
+.phone-list {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.phone-list p {
+    display: flex;
+    align-items: center; 
+    gap: 8px;
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+}

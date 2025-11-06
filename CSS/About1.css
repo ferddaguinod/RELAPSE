@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222d52;
+    padding: 15px 30px;
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.navbar .text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #f4a261;
+    background: gray;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.about-us {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 50%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.about-text h1 {
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: TYPING 2s ease-in-out;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    background-color: #222d52;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.explore-btn:hover {
+    background-color: #f4a261;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image, .about-text {
+        max-width: 100%;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .explore-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
